@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mock Email System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f6f8fc;
+        }
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+        .sidebar {
+            width: 250px;
+            background: #ffffff;
+            padding: 20px;
+            border-right: 1px solid #ddd;
+        }
+        .sidebar h2 {
+            font-size: 18px;
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            margin: 10px 0;
+        }
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #333;
+            display: block;
+            padding: 10px;
+            background: #f1f3f4;
+            border-radius: 5px;
+        }
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        .email-list .email-item {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            background: #fff;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-bottom: 5px;
+        }
+        .email-item:hover {
+            background: #f5f5f5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Inbox</h2>
+            <ul>
+                <li><a href="#">Compose</a></li>
+                <li><a href="#">Inbox</a></li>
+                <li><a href="#">Drafts</a></li>
+                <li><a href="#">Sent</a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <h2>Emails</h2>
+            <div class="email-list" id="email-list">
+                <div class="email-item" onclick="location.href='hr_department.html'">
+                    <strong>HR Department</strong><br>
+                    Emergency Contact Update
+                </div>
+                <div class="email-item" onclick="location.href='finance_team.html'">
+                    <strong>Finance Team</strong><br>
+                    Tax Documents for 2024
+                </div>
+                <div class="email-item" onclick="location.href='it_support.html'">
+                    <strong>IT Support</strong><br>
+                    Password Expiration Notice
+                </div>
+                <div class="email-item" onclick="location.href='bank_services.html'">
+                    <strong>Bank Services</strong><br>
+                    Monthly Bank Statement
+                </div>
+                <div class="email-item" onclick="location.href='medical_center.html'">
+                    <strong>Medical Center</strong><br>
+                    Test Results Available
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
