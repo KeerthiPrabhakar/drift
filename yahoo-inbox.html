@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yahoo Mail - Inbox</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f6f8fc;
+        }
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+        .sidebar {
+            width: 250px;
+            background: #400090;
+            color: white;
+            padding: 20px;
+            border-right: 1px solid #ddd;
+        }
+        .sidebar h2 {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            margin: 10px 0;
+        }
+        .sidebar ul li a {
+            text-decoration: none;
+            color: white;
+            display: block;
+            padding: 10px;
+            background: #573b9d;
+            border-radius: 5px;
+        }
+        .sidebar ul li a:hover {
+            background: #6e4eb6;
+        }
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        .email-list .email-item {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            background: #fff;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-bottom: 5px;
+        }
+        .email-item:hover {
+            background: #f5f5f5;
+        }
+        .spam {
+            background: #ffcccb;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar (Folders) -->
+        <div class="sidebar">
+            <h2>Yahoo Mail</h2>
+            <ul>
+                <li><a href="yahoo-inbox.html">Inbox</a></li>
+                <li><a href="#">Drafts</a></li>
+                <li><a href="#">Sent</a></li>
+                <li><a href="#spam">Spam</a></li>
+                <li><a href="#">Deleted</a></li>
+            </ul>
+        </div>
+
+        <!-- Main Content (Emails) -->
+        <div class="main-content">
+            <h2>Inbox</h2>
+            <div class="email-list">
+                <div class="email-item" onclick="location.href='bank.html'">
+                    <strong>Bank Services</strong><br>
+                    <span>Your monthly statement is ready.</span>
+                </div>
+                <div class="email-item" onclick="location.href='hr.html'">
+                    <strong>HR Department</strong><br>
+                    <span>Update your emergency contact details.</span>
+                </div>
+                <div class="email-item" onclick="location.href='itsupport.html'">
+                    <strong>IT Support</strong><br>
+                    <span>Action required: Password expiration notice.</span>
+                </div>
+                <div class="email-item" onclick="location.href='medicalcentre.html'">
+                    <strong>Medical Center</strong><br>
+                    <span>Your lab test results are available.</span>
+                </div>
+                <div class="email-item" onclick="location.href='tax.html'">
+                    <strong>Finance Team</strong><br>
+                    <span>Tax documents for 2024 available.</span>
+                </div>
+            </div>
+
+            <!-- Spam Folder -->
+            <h2 id="spam">Spam</h2>
+            <div class="email-list">
+                <div class="email-item spam" onclick="location.href='spam1.html'">
+                    <strong>Lottery Department</strong><br>
+                    <span>Congratulations! You have won $1,000,000.</span>
+                </div>
+                <div class="email-item spam" onclick="location.href='spam2.html'">
+                    <strong>Unknown Sender</strong><br>
+                    <span>URGENT: Your social security number has been compromised.</span>
+                </div>
+                <div class="email-item spam" onclick="location.href='spam3.html'">
+                    <strong>Fake Bank Alert</strong><br>
+                    <span>Confirm your account details now to prevent closure.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
